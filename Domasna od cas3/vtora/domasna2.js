@@ -1,14 +1,13 @@
+//!prv nacin
 //? Za domasna da se dodade uste eden modul so ime domasna.js koj kje ima funkcija da promeni farenhajt vo celzius i obrantno
 
-function pretvoriStepeni(stepeni){
-  return function(vrednost){
-    switch(stepeni){
-      case "c2f":
-        return (vrednost*9/5)+32;
-      case "f2c":
-        return (vrednost-32)*5/9;
-    }
-  }
+const c2f = (c) =>{
+  return (c*9/5)+32;
+  
+};
+
+const f2c = (f) => {
+return (f-32)*5/9;
 }
 
 //? Da ima funkcija sto presmetuva plostina i perimetar na triagolnik
@@ -35,11 +34,51 @@ const kakovEbrojot = x => {
   return x%2==0 ? `Brojot e paren` : `Brojot e neparen`;
 }
 
+
 module.exports = {
-  pretvoriStepeni,
+  c2f,
+  f2c,
   plostinaTriagolnik,
   perimetarTriagolnik,
   plostinaPravoagolnik,
   perimetarPravoagolnik,
   kakovEbrojot,
 }
+
+
+
+//!vtor nacin
+
+//* 1
+// exports.c2f = (c) =>{
+//     return (c*9/5)+32;
+    
+//   };
+
+// exports.f2c = (f) => {
+//   return (f-32)*5/9;
+// }
+
+
+//* 2 
+// exports.plostinaTriagolnik = (a, b) => {
+//   return (a*b)/2;
+// };
+ 
+// exports.perimetarTriagolnik = (a, b, c) => {
+//   return a+b+c;
+// };
+
+//* 3
+// exports.plostinaPravoagolnik = (a, b)=>{
+//   return a*b;
+// }; 
+
+// exports.perimetarPravoagolnik =(a,b)=>{
+//   return (2*a)+(2*b);
+// };
+
+//* 4
+// exports.kakovEbrojot = (x)=> {
+//   return x%2==0 ? `Brojot e paren` : `Brojot e neparen`;
+// };
