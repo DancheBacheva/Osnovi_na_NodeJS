@@ -74,23 +74,3 @@ console.log(studenti);
 //? 5. Tekstot treba da bide zachuvan vo fajlot
 
 
-// (async () => {
-//   try {
-//     const dataString = await readWrite.fileRead("studenti.json");
-//     let studenti = JSON.parse(dataString);
-
-//     const sortProsek = studenti.sort((a, b) => {
-//       if (a.prosek < b.prosek) {
-//         return -1;
-//       } else if (a.prosek > b.prosek) {
-//         return 1;
-//       }
-//       return 0;
-//     });
-
-// await readWrite.fileWrite("prosek.txt", JSON.stringify(sredenProsek));
-// await readWrite.fileDelete("prosek.txt");
-// } catch (err) {
-// console.log(err);
-// }
-// })();
