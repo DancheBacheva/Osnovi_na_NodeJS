@@ -8,10 +8,12 @@
 const http = require("http");
 
 const handler = (req, res)=>{
-  const [, ime] = req.url.split("/ime/");
-  
-  const brojKarakteri = ime.length%2==0 ? `Paren broj karakteri: Da` : `Paren broj karakteri: Ne` ;
-  const karakteri = ime.length;
+  const [_, op, ime] = req.url.split("/");
+  console.log(op);
+  console.log(ime);
+
+  const karakteri = ime?.length;
+  const brojKarakteri = ime.length %2 == 0 ? `Paren broj karakteri: Da` : `Paren broj karakteri: Ne` ;
   const samoglaski = ["a", "e", "i", "o", "u"];
   
   let brojNaSamoglaski = 0;
@@ -27,13 +29,11 @@ const handler = (req, res)=>{
   res.end(`Imeto ${ime} ima ${karakteri} karakteri od koi ${brojNaSoglaski} se soglaski, a ${brojNaSamoglaski} se samoglaski. ${brojKarakteri}`);
   };
 
-
 const server = http.createServer(handler);
 server.listen(10000, (err) => {
   if (err) console.log("error");
   console.log("server started on port 10000");
 });
-
 
 
 
