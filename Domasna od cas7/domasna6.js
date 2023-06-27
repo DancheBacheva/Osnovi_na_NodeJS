@@ -24,16 +24,16 @@ app.get("/obrabotka/:ime", (req, res)=>{
 
 
 //?Uste edna funkcija za testiranje
-// app.get("/pravoagolnik/:op/:a/:b", (req, res)=>{
-//   switch(req.params.op){
-//    case "plostina":
-//        return res.send(`${Number(req.params.a) * Number(req.params.b)}`);
-//    case "perimetar":
-//      return res.send(`${2 * Number(req.params.a)+ Number(req.params.b)}`);
-//    default :
-//    return res.send("Greska!");
-//      };
-//   });
+app.get("/pravoagolnik/:op/:a/:b", (req, res)=>{
+  switch(req.params.op){
+   case "plostina":
+       return res.send(`${Number(req.params.a) * Number(req.params.b)}`);
+   case "perimetar":
+    return res.send(`${(2 * Number(req.params.a))+(2 * Number(req.params.b))}`);
+   default :
+   return res.send("Greska!");
+     };
+  });
 
 app.listen(10000, (err)=>{
   if(err) return console.log(err);
