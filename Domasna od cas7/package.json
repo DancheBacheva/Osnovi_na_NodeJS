@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "domasna-od-cas7",
+  "version": "1.0.0",
+  "main": "domasna6.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node domasna6.js"
+  },
+  "keywords": [],
+  "author": "Danche",
+  "license": "ISC",
+  "description": ""
+}
